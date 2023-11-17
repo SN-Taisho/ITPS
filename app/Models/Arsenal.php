@@ -10,9 +10,10 @@ class Arsenal extends Model
     use HasFactory;
 
     protected $fillable = [
-        'trournament',
+        'tournament',
         'date',
         'oiling_lenght',
+        'remarks',
         'atl_centre',
         'atl_track',
         'atl_outside',

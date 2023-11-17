@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('arsenals', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->string('tournament');
             $table->string('date');
             $table->string('oiling_lenght');

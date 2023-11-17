@@ -33,8 +33,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/students/{userDetails}',[UserDetailsController::class,'show']);
-Route::get('/students/{userDetails}/equipments/',[ArsenalController::class,'showAll']);
+
 
 //auth
 Route::post('/register',[UserController::class, 'register']);
@@ -49,3 +48,12 @@ Route::put('/edit-post/{post}', [PostController::class,'updatePost']);
 Route::delete('/delete-post/{post}', [PostController::class,'deletePost']);
 
 //Arsenal
+Route::get('/students/{userDetails}',[UserDetailsController::class,'show']);
+
+Route::get('/students/{userDetails}/equipments/',[ArsenalController::class,'showAll']);
+
+Route::get('/students/{userDetails}/equipments/add',[ArsenalController::class,'showAdd']);
+
+Route::post('/students/{userDetails}/equipments/create',[ArsenalController::class,'createArsenal']);
+
+Route::delete('/students/{userDetails}/equipments/{arsenal}/delete', [ArsenalController::class, 'deleteArsenal']);
